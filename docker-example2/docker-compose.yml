@@ -1,0 +1,15 @@
+version: "3.0"
+services:
+  web:
+    # 현재 파일 내의 Dockerfile 실행
+    build: .
+    ports:
+      - "3000:3000"
+
+  mongodb:
+    # 현재 파일 내의 Dockerfile 실행
+    image: "mongo"
+    ports:
+      - "27017:27017"
+    volumes:
+      - .:/data/db
